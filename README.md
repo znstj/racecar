@@ -2,8 +2,8 @@
 # art-racecar V1.0  2019.01.30  
 # art-racecar V1.1  2019.07.17 完善手柄遥控功能  
 # art-racecar V1.1  2021.01.20 添加position_nav.py，多点导航例子，使用move_base_simple/goal  
-# 第十四和十五届全国大学生智能汽车竞赛室外光电竞速创意赛指定平台  
-# 因第十六届不再使用该平台，ART-Robot-Release上不再提供更新，QQ群不再提供技术支持，有问题可以直提Issues
+## 第十四和十五届全国大学生智能汽车竞赛室外光电竞速创意赛指定平台  
+## 因第十六届不再使用该平台，ART-Robot-Release上不再提供更新，QQ群不再提供技术支持，有问题可以直提Issues  
 
 ROS racecar  
 ************************安装************************  
@@ -61,7 +61,7 @@ e) 开始导航
 f) 多点导航
 source  工作空间
 cd art_racecar/src 
-./position_nav.py
+./position_nav.py  
 *********************软件接口***********************  
 1.启动底盘  
 	启动底盘需要启动rosserial_python节点。  
@@ -80,5 +80,6 @@ cd art_racecar/src
 
 											
 											# Steven Zhang
+											# 2020.01.20  
 											# 2020.01.20  
 	
