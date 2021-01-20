@@ -1,11 +1,14 @@
 # art_racecar  
-# art-racecar V1.0  2019.01.30   
-# art-racecar V1.1  2019.07.17 完善手柄遥控功能   
+# art-racecar V1.0  2019.01.30  
+# art-racecar V1.1  2019.07.17 完善手柄遥控功能  
+# art-racecar V1.1  2021.01.20 添加position_nav.py，多点导航例子，使用move_base_simple/goal  
+# 第十四和十五届全国大学生智能汽车竞赛室外光电竞速创意赛指定平台  
+# 因第十六届不再使用该平台，ART-Robot-Release上不再提供更新，QQ群不再提供技术支持，有问题可以直提Issues
 
 ROS racecar  
 ************************安装************************  
 cd  ~/  
-git clone https://github.com/ART-Robot-Release/racecar  
+git clone https://github.com/znstj/racecar 
 cd racecar  
 ./install.sh  
 配置小车串口udev：  
@@ -16,18 +19,18 @@ sudo reboot
 先安装电脑用户名和主机名配置主从机  
 a) 运行车  
 roslaunch art_racecar Run_car.launch  
-b) 3.3运行gmapping  
+b) 运行gmapping  
 roslaunch art_racecar Run_gmapping.launch  
-c) 3.4运行键盘控制  
+c) 运行键盘控制  
 rosrun art_racecar racecar_teleop.py  
 或者手柄遥控  
 roslaunch art_racecar teleop_joy.launch  
-d) 3.5.本地电脑打开rviz  
+d) 本地电脑打开rviz  
 本地电脑打开：  
 source  工作空间  
 source art_racecar/art_rviz.sh  
 roslaunch art_racecar rviz.launch  
-e) 3.6 建立地图  
+e) 建立地图  
 键盘控制建立地图,按键如下：  
 U	I 	O  
 J	K	L  
@@ -48,13 +51,17 @@ b) 运行车
 roslaunch art_racecar Run_car.launch  
 c) 运行AMCL  
 roslaunch art_racecar amcl_nav.launch  
-d) .本地电脑打开rviz  
+d) 本地电脑打开rviz  
 本地电脑打开：  
 source  工作空间  
 source art_racecar/art_rviz.sh  
 roslaunch art_racecar rviz.launch  
-e) 4.5 开始导航   
+e) 开始导航   
 在RVIZ中设定初始坐标，设定目标位置，开始导航  
+f) 多点导航
+source  工作空间
+cd art_racecar/src 
+./position_nav.py
 *********************软件接口***********************  
 1.启动底盘  
 	启动底盘需要启动rosserial_python节点。  
@@ -73,5 +80,5 @@ e) 4.5 开始导航
 
 											
 											# Steven Zhang
-											# 2019.01.30
+											# 2020.01.20  
 	
